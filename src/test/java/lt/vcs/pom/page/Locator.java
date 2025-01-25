@@ -15,11 +15,11 @@ public class Locator {
             public static final By spanIsvykimoData = By.xpath
                     ("(//span[@class='sc-4eytme-3 dyKPpp' and contains(text(),'Išvykimo data')])[1]");
             public static final By divAriaLabelData = By.xpath
-                    ("//div[@aria-label='Ant 2024 m. gruodžio 31 d.']");
+                    ("//div[@aria-label='Pen 2025 m. sausio 31 d.']");
             public static final By spanGrizimoData = By.xpath
                     ("(//span[@class='sc-4eytme-3 dyKPpp' and contains(text(),'Grįžimo data')])[1]");
             public static final By divAriaLabelDataBackward = By.xpath
-                    ("//div[@aria-label='Pen 2025 m. sausio 3 d.']");
+                    ("//div[@aria-label='Sek 2025 m. vasario 2 d.']");
             public static final By spanKeleiviai = By.xpath("(//span)[10]");
             public static final By buttonSumazinti = By.xpath("(//button[@aria-label='Sumažinti'])[1]");
             public static final By buttonPadidinti = By.xpath("(//button[@aria-label='Padidinti'])[1]");

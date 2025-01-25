@@ -39,7 +39,7 @@ public class HomePage {
     public static void selectTripDataBackward() {
         Common.waitElementToBeVisible(spanGrizimoData, 20);
         Common.clickOnElement(spanGrizimoData);
-        Common.waitElementToBeVisible(divAriaLabelDataBackward, 20);
+        Common.waitElementToBeVisible(divAriaLabelDataBackward, 30);
         Common.clickOnElement(divAriaLabelDataBackward);
     }
 
