@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium demo" parallel="methods" thread-count="1">
+    <test name="DemoQA">
+        <classes>
+            <class name="lt.vcs.pom.test.ltglink.LoginTest">
+                <methods>
+                    <include name="testPositiveLoginValidUserEmailAndPassword"/>
+                    <include name="testNegativeLoginNoUserEmail"/>
+                    <include name="testNegativeLoginNoUserPassword"/>
+                </methods>
+            </class>
+            <class name="lt.vcs.pom.test.ltglink.LogoutTest">
+                <methods>
+                    <include name="testPositiveLogout"/>
+                </methods>
+            </class>
+            <class name="lt.vcs.pom.test.ltglink.TripSearchTest">
+                <methods>
+                    <include name="testPositiveTripSearchOneWay"/>
+                    <include name="testPositiveTripSearchTwoWays"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
