@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Common {
-    public static void setUpChrome() {
-        Driver.setChromeDriver();
-    }
 
     public static void setUpChrome(int sec) {
         Driver.setChromeDriver();

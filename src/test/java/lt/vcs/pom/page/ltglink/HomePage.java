@@ -1,6 +1,7 @@
 package lt.vcs.pom.page.ltglink;
 
 import lt.vcs.pom.page.Common;
+import org.openqa.selenium.WebDriver;
 
 import static lt.vcs.pom.page.Locator.LtgLink.HomePage.*;
 
@@ -33,14 +34,14 @@ public class HomePage {
 
     public static void selectTripData() {
         Common.clickOnElement(spanIsvykimoData);
-        Common.clickOnElement(divAriaLabelData);
+        Common.clickOnElement(divAriaLabelData());
     }
 
     public static void selectTripDataBackward() {
         Common.waitElementToBeVisible(spanGrizimoData, 20);
         Common.clickOnElement(spanGrizimoData);
-        Common.waitElementToBeVisible(divAriaLabelDataBackward, 30);
-        Common.clickOnElement(divAriaLabelDataBackward);
+        Common.waitElementToBeVisible(divAriaLabelDataBackward(), 30);
+        Common.clickOnElement(divAriaLabelDataBackward());
     }
 
     public static void selectPassengerType() {

@@ -2,6 +2,10 @@ package lt.vcs.pom.page;
 
 import org.openqa.selenium.By;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 public class Locator {
     public static class LtgLink {
         public static class HomePage {
@@ -14,12 +18,34 @@ public class Locator {
                     ("//ul[@id='stop-search-select-list-ticket-destination']//li[.//span[text()='Vilnius']]");
             public static final By spanIsvykimoData = By.xpath
                     ("(//span[@class='sc-4eytme-3 dyKPpp' and contains(text(),'Išvykimo data')])[1]");
-            public static final By divAriaLabelData = By.xpath
-                    ("//div[@aria-label='Ket 2025 m. vasario 27 d.']");
+
+            public static By divAriaLabelData() {
+                LocalDate tomorrow = LocalDate.now().plusDays(1);
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy 'm.' MMMM d 'd.'", new Locale("lt"));
+                String formattedDate = tomorrow.format(formatter);
+
+                By dateXPath = By.xpath("//div[@aria-label[contains(.,'" + formattedDate + "')]]");
+
+                System.out.println("XPath for tomorrow's date: " + dateXPath);
+                return dateXPath;
+            }
+
             public static final By spanGrizimoData = By.xpath
                     ("(//span[@class='sc-4eytme-3 dyKPpp' and contains(text(),'Grįžimo data')])[1]");
-            public static final By divAriaLabelDataBackward = By.xpath
-                    ("//div[@aria-label='Šeš 2025 m. kovo 1 d.']");
+
+            public static By divAriaLabelDataBackward() {
+                LocalDate tomorrow = LocalDate.now().plusDays(2);
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy 'm.' MMMM d 'd.'", new Locale("lt"));
+                String formattedDate = tomorrow.format(formatter);
+
+                By dateXPath = By.xpath("//div[@aria-label[contains(.,'" + formattedDate + "')]]");
+
+                System.out.println("XPath for tomorrow's date: " + dateXPath);
+                return dateXPath;
+            }
+
             public static final By spanKeleiviai = By.xpath("(//span)[10]");
             public static final By buttonSumazinti = By.xpath("(//button[@aria-label='Sumažinti'])[1]");
             public static final By buttonPadidinti = By.xpath("(//button[@aria-label='Padidinti'])[1]");
