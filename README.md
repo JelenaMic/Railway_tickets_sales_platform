@@ -87,7 +87,7 @@
 
 ### Video recording of tests
 
-[![Watch the video](https://img.icons8.com/clouds/100/000000/video.png)](https://drive.google.com/file/d/1EPkttStA-oKEIdWLtEE5DHnlzLgrYuYg/view?usp=share_link)
+[![Watch the video](https://icons8.com/icon/35090/video)](https://drive.google.com/file/d/1EPkttStA-oKEIdWLtEE5DHnlzLgrYuYg/view?usp=share_link)
 
 
 
